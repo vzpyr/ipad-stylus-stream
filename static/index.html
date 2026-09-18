@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <title>ipad-stylus-stream</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="box">
+        <span class="label">area</span>
+        <button class="btn sq" id="btn-minus" type="button">-</button>
+        <input
+          class="range-slider"
+          id="area-width-slider"
+          type="range"
+          min="15"
+          max="100"
+          value="30"
+        />
+        <button class="btn sq" id="btn-plus" type="button">+</button>
+        <span class="val" id="area-val">30%</span>
+      </div>
+
+      <div class="box">
+        <span class="label">smooth</span>
+        <button class="btn on" id="smoothing-toggle" type="button">on</button>
+      </div>
+
+      <div class="box">
+        <span class="label">rotate</span>
+        <button class="btn" id="rotate-button" type="button">0°</button>
+      </div>
+
+      <div class="box">
+        <span class="label">delay</span>
+        <span class="val" id="latency-val">-- ms</span>
+      </div>
+
+      <div class="box">
+        <span class="label">rate</span>
+        <span class="val" id="rate-val">0/s</span>
+      </div>
+
+      <button class="btn push-right" id="clear-button" type="button">
+        clear
+      </button>
+    </header>
+
+    <main class="canvas-wrapper">
+      <div class="active-area-container" id="area-container">
+        <canvas id="stylus-canvas"></canvas>
+      </div>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

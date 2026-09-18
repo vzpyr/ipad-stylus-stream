@@ -1,0 +1,130 @@
+:root {
+  --bg: #000;
+  --surface: #0a0a0a;
+  --panel: #111;
+  --border: #222;
+  --text: #eee;
+  --muted: #666;
+
+  --font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --header-h: 40px;
+  --box-h: 28px;
+  --gap: 6px;
+  --pad: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font: 12px var(--font);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  height: var(--header-h);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  padding: 0 var(--pad);
+}
+
+.box {
+  height: var(--box-h);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  padding: 0 var(--pad);
+}
+
+.label {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.val {
+  font-size: 11px;
+  min-width: 32px;
+  text-align: right;
+}
+
+.range-slider {
+  width: 70px;
+  height: 14px;
+  accent-color: var(--text);
+  cursor: pointer;
+  touch-action: pan-x;
+}
+
+.btn {
+  height: 20px;
+  min-width: 20px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font: 11px var(--font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.btn:active,
+.btn.on {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.btn.sq {
+  width: 20px;
+  padding: 0;
+}
+
+.btn.push-right {
+  margin-left: auto;
+  height: var(--box-h);
+  padding: 0 10px;
+}
+
+.canvas-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none;
+}
+
+.active-area-container {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  touch-action: none;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
