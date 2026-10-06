@@ -10,9 +10,7 @@ Proof of concept iPad stylus to Linux uinput bridge
 - Position, pressure and tilt passthrough
 - Optional smoothing and rotation
 
-## How to use
-
-Requires: Rust/Cargo
+## Build/Usage
 
 1. Build and start server:
 
@@ -24,4 +22,4 @@ cargo run --release
 
 ## License
 
-MIT
+[MIT](LICENSE)
